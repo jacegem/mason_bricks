@@ -19,4 +19,3 @@ mason make page -o examples
 - https://github.com/felangel/mason
 - https://github.com/LukeMoody01/mason_bricks
 - https://docs.brickhub.dev/brick-syntax
-# mason_bricks

@@ -1,0 +1,10 @@
+{
+  "bricks": {
+    "page": {
+      "path": "bricks/page"
+    },
+    "data": {
+      "path": "bricks/data"
+    }
+  }
+}
