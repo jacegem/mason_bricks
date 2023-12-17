@@ -3,3 +3,5 @@ bricks:
     path: bricks/page
   data:
     path: bricks/data
+  riverpod_data:
+    path: bricks/riverpod_data
