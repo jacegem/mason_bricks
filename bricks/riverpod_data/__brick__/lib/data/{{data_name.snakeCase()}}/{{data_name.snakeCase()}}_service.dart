@@ -1,16 +1,32 @@
-import 'package:dart_json_mapper/dart_json_mapper.dart';
-import 'package:../base/base_store.dart';
-import 'package:{{data_name.snakeCase()}}.dart';
-import 'package:{{data_name.snakeCase()}}_store.dart';
-import 'package:{{data_name.snakeCase()}}_repository.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import '{{data_name.snakeCase()}}_repository.dart';
+import '{{data_name.snakeCase()}}_store.dart';
 
-class {{data_name.pascalCase()}}Service extends GetxService {
-  static {{data_name.pascalCase()}}Service get to => Get.find();
+part '{{data_name.snakeCase()}}_service.g.dart';
 
-  var repo = {{data_name.pascalCase()}}Repository();
-  late {{data_name.pascalCase()}}Store store;
+@riverpod
+class {{data_name.pascalCase()}}Service extends _${{data_name.pascalCase()}}Service {
+  late {{data_name.pascalCase()}}Repository _repo;
+  late {{data_name.pascalCase()}}Store _store;
+  final storeName = '{{data_name.pascalCase()}}';
 
-  init() async {
-    store = await {{data_name.pascalCase()}}Store.init();    
+  @override
+  AsyncValue<List<Product>?> build() {
+    final graphqlService = ref.watch(graphqlServiceProvider);
+    _repo = {{data_name.pascalCase()}}Repository(graphqlService);
+    final db = ref.watch(sembastDatabaseProvider);
+    _store = {{data_name.pascalCase()}}Store(db, storeName);
+
+    fetch{{data_name.pascalCase()}}List();
+    return const AsyncLoading();
+  }
+
+  void fetch{{data_name.pascalCase()}}List() async {
+    state = const AsyncLoading();
+    final res = await _repo.fetchMartList();
+    if (res != null) {
+      state = AsyncData(res);
+    }
+    return res;
   }
 }
