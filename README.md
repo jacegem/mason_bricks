@@ -3,32 +3,32 @@
 Flutter 프로젝트에서 사용하는 bricks 입니다.
 
 
-## 생성 
+## 생성
 ```shell
 mason new riverpod-data -o bricks
 ```
 
-## 등록 
+## 등록
 ```shell
-mason add riverpod_data --path bricks/riverpod_data   
+mason add riverpod_data --path bricks/riverpod_data
 ```
 
-## 만들기 
+## 만들기
 
 ```shell
-mason make riverpod_data -o examples    
+mason make riverpod_data -o examples
 ```
 
 ## brick 생성
 
 ```shell
-mason new page -o bricks 
+mason new page -o bricks
 ```
 
 ## brick 추가
 
 ```shell
-mason add page --path bricks/page 
+mason add page --path bricks/page
 ```
 
 ## brick 으로 만들기
