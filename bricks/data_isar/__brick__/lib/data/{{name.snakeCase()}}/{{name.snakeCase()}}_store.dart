@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:isar/isar.dart';
-import 'package:mart_shopping/main_provider.dart';
+import '/main_provider.dart';
 
-final {{name.snakeCase()}}StoreProvider = Provider<{{name.pascalCase()}}Store>((ref) {
+final {{name.camelCase()}}StoreProvider = Provider<{{name.pascalCase()}}Store>((ref) {
   final isar = ref.watch(isarProvider);
   return {{name.pascalCase()}}Store(isar);
 });

@@ -1,5 +1,6 @@
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:isar/isar.dart';
+import '/main_provider.dart';
 
 part '{{name.snakeCase()}}_isar.g.dart';
 
@@ -7,10 +8,9 @@ part '{{name.snakeCase()}}_isar.g.dart';
 @collection
 class {{name.pascalCase()}}Isar {
   int id;
-  bool initialized;
   {{name.pascalCase()}}Isar(
-    this.id, {
-    this.initialized = false,
+   {
+    this.id = isarNewId,
   });
 
   String key = "";

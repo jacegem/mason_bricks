@@ -1,6 +1,5 @@
-import 'package:mart_shopping/data/{{name.snakeCase()}}/{{name.snakeCase()}}_isar.dart';
-import 'package:mart_shopping/data/{{name.snakeCase()}}/{{name.snakeCase()}}_store.dart';
-import 'package:mart_shopping/main_provider.dart';
+import '{{name.snakeCase()}}_isar.dart';
+import '{{name.snakeCase()}}_store.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part '{{name.snakeCase()}}_provider.g.dart';
@@ -11,15 +10,7 @@ class {{name.pascalCase()}} extends _${{name.pascalCase()}} {
 
   @override
   {{name.pascalCase()}}Isar build() {
-    store = ref.watch({{name.snakeCase()}}StoreProvider);
-    // store.listen((dataList) {
-    //   state = dataList;
-    // });
-
-    return {{name.pascalCase()}}Isar(isarNewId);
-  }
-
-  void initialized(bool bool) {
-    state = state.copyWith(initialized: true);
+    store = ref.watch({{name.camelCase()}}StoreProvider);
+    return {{name.pascalCase()}}Isar();
   }
 }
