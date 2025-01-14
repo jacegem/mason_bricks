@@ -12,7 +12,9 @@ class {{name.pascalCase()}} extends _${{name.pascalCase()}} {
   @override
   {{name.pascalCase()}}Isar build() {
     store = ref.watch({{name.camelCase()}}StoreProvider);
-    repo = {{name.pascalCase()}}Repo(ref.watch(graphqlClientProvider));
+    var client = ref.watch(graphqlClientProvider);
+    repo = {{name.pascalCase()}}Repo(client);
+
     return {{name.pascalCase()}}Isar();
   }
 }

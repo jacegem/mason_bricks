@@ -2,13 +2,20 @@
 
 Flutter 프로젝트에서 사용하는 bricks 입니다.
 
+## 에러 나면,
+
+```shell
+dart pub global activate mason_cli
+```
 
 ## 생성
+
 ```shell
 mason new riverpod-data -o bricks
 ```
 
 ## 등록
+
 ```shell
 mason add riverpod_data --path bricks/riverpod_data
 ```
@@ -48,7 +55,6 @@ mason ls -g
 ```shell
 mason remove page -g
 ```
-
 
 ## 참고
 
