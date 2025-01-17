@@ -2,6 +2,19 @@
 
 Flutter 프로젝트에서 사용하는 bricks 입니다.
 
+## clean architecture
+
+### presentation
+
+#### controller
+
+```shell
+mason new controller -o bricks
+mason add controller --path bricks/controller -g
+--
+mason make controller
+```
+
 ## 에러 나면,
 
 ```shell
