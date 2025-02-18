@@ -1,4 +1,4 @@
-name: clean_page
+name: clean_flow
 description: A new brick created with the Mason CLI.
 
 # The following defines the brick repository url.
@@ -32,8 +32,8 @@ vars:
     default: Dash
     prompt: What is feature name?
 
-  name:
+  action:
     type: string
-    description: class name
+    description: action name
     default: Dash
-    prompt: What is class name?
+    prompt: What is action name?

@@ -1,4 +1,4 @@
-name: clean_page
+name: clean_store
 description: A new brick created with the Mason CLI.
 
 # The following defines the brick repository url.
@@ -26,14 +26,8 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
-  feature:
-    type: string
-    description: feature name
-    default: Dash
-    prompt: What is feature name?
-
   name:
     type: string
-    description: class name
+    description: Your name
     default: Dash
-    prompt: What is class name?
+    prompt: What is your name?

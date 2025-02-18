@@ -1,4 +1,4 @@
-name: clean_page
+name: clean_sembast
 description: A new brick created with the Mason CLI.
 
 # The following defines the brick repository url.
@@ -31,9 +31,3 @@ vars:
     description: feature name
     default: Dash
     prompt: What is feature name?
-
-  name:
-    type: string
-    description: class name
-    default: Dash
-    prompt: What is class name?

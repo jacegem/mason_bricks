@@ -4,6 +4,12 @@ Flutter 프로젝트에서 사용하는 bricks 입니다.
 
 ## clean architecture
 
+### store
+
+```shell
+mason new clean_store -o bricks
+```
+
 ### presentation
 
 #### controller
